@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+/* Button style */
+button {
+  background: #ff4d6d;
+  color: white;
+  font-size: 18px;
+  padding: 14px 26px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
+  animation: shake 1.4s infinite;
+}
+
+button:hover {
+  background: #ff2e63;
+}
+
+/* Delay */
+.delay1 { animation-delay: 0s; }
+.delay2 { animation-delay: 0.2s; }
+.delay3 { animation-delay: 0.4s; }
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:10%;">💕</div>
+<div class="heart" style="left:25%; animation-delay:1s;">💖</div>
+<div class="heart" style="left:40%; animation-delay:2s;">💗</div>
+<div class="heart" style="left:55%; animation-delay:3s;">💞</div>
+<div class="heart" style="left:70%; animation-delay:4s;">💓</div>
+<div class="heart" style="left:85%; animation-delay:5s;">💘</div>
+
+<!-- Buttons -->
+<div>
+  <a href="https://wa.me/919876543210?text=I'm%20really%20sorry%20😞💖%20Please%20forgive%20me%20🥺🙏" target="_blank">
+    <button class="delay1">I'm really sorry 😞💖</button>
+  </a>
+
+  <a href="https://wa.me/919876543210?text=I'm%20really%20sorry%20😞💖%20Please%20forgive%20me%20🥺🙏" target="_blank">
+    <button class="delay2">Forgive me, bestie 🥺💔</button>
+  </a>
+
+  <a href="https://wa.me/919876543210?text=I'm%20really%20sorry%20😞💖%20Please%20forgive%20me%20🥺🙏" target="_blank">
+    <button class="delay3">😭</button>
+  </a>
+
+  <a href="https://wa.me/919876543210?text=I'm%20really%20sorry%20😞💖%20Please%20forgive%20me%20🥺🙏" target="_blank">
+    <button class="delay1">🫶</button>
+  </a>
+</div>
+
+</body>
+</html>
